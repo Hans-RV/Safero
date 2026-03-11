@@ -1,0 +1,227 @@
+/* Safero Chrome Extension Styles */
+
+.safero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 4px 8px 4px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 999;
+  position: relative;
+}
+
+.safero-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.safero-badge-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.safero-badge-icon {
+  font-size: 14px;
+}
+
+.safero-badge-text {
+  font-weight: 600;
+}
+
+.safero-badge-score {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Badge Variants */
+.safero-safe {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.safero-suspicious {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.safero-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.safero-loading {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Spinner */
+.safero-spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Detailed Analysis Panel */
+.safero-details {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Geist Mono', monospace;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.safero-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.safero-details-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.safero-close {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.safero-close:hover {
+  background: #e5e7eb;
+  transform: scale(1.1);
+}
+
+.safero-details-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.safero-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.safero-metric-label {
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.safero-metric-value {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.safero-risk-low {
+  color: #10b981 !important;
+}
+
+.safero-risk-medium {
+  color: #f59e0b !important;
+}
+
+.safero-risk-high {
+  color: #ef4444 !important;
+}
+
+.safero-threats {
+  background: #fef2f2;
+  border-left: 4px solid #ef4444;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.safero-threats h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #991b1b;
+  font-weight: 700;
+}
+
+.safero-threats ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #7f1d1d;
+}
+
+.safero-threats li {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.safero-recommendation {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.safero-recommendation h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1e40af;
+  font-weight: 700;
+}
+
+.safero-recommendation p {
+  margin: 0;
+  color: #1e3a8a;
+  font-size: 13px;
+  line-height: 1.5;
+}
