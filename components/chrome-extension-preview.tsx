@@ -12,7 +12,7 @@ export function ChromeExtensionPreview() {
             See It In Action
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-            Our Chrome extension integrates seamlessly into your Gmail inbox for instant protection.
+            Use our optional Chrome extension to bring Safero protection directly into your Gmail inbox.
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export function ChromeExtensionPreview() {
                 { title: 'Instant Analysis', desc: 'Get real-time threat detection on every email' },
                 { title: 'Visual Indicators', desc: 'Clear color-coded security status badges' },
                 { title: 'Detailed Reports', desc: 'Understand why an email is flagged' },
-                { title: 'One-Click Setup', desc: 'Add to Chrome and start protecting immediately' },
+                { title: 'One-Click Setup', desc: 'Install the optional Chrome extension and start protecting immediately' },
               ].map((item, i) => (
                 <div key={i} className="flex gap-3 sm:gap-4 items-start group">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1 group-hover:bg-primary/20 transition-colors">

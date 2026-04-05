@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Safero - AI Email Security',
-  description: 'Safero is a Chrome extension that analyzes incoming emails using AI and detects phishing attempts in real time.',
+  description: 'Safero analyzes incoming emails using AI and detects suspicious senders, malicious links, and phishing attempts in real time.',
   generator: 'v0.app',
   icons: {
     icon: '/safero.png',

@@ -19,14 +19,14 @@ export function HeroSection() {
                 AI Email Security That Protects You From Phishing
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                Safero is a Chrome extension that analyzes incoming emails using AI and detects suspicious senders, malicious links, and phishing attempts in real time.
+                Safero analyzes incoming emails using AI and detects suspicious senders, malicious links, and phishing attempts in real time.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 sm:px-8 h-11 sm:h-12 text-sm sm:text-base font-semibold shadow-lg hover:shadow-xl transition-all w-full sm:w-auto">
-                Add to Chrome
+                Add to Chrome Extension
               </Button>
               {session && (
                 <Link href="/dashboard" className="w-full sm:w-auto">
