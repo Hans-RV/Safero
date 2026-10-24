@@ -2,12 +2,13 @@ import { NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import Groq from 'groq-sdk';
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
-
 export async function POST(request: Request) {
   try {
+    // Initialize Groq client
+    const groq = new Groq({
+      apiKey: process.env.GROQ_API_KEY,
+    });
+
     // Check authentication
     const session = await auth();
     
@@ -75,7 +76,7 @@ Format your response as JSON with this structure:
           content: emailText,
         },
       ],
-      model: 'llama-3.3-70b-versatile',
+      model: process.env.GROQ_MODEL || 'openai/gpt-oss-120b',
       temperature: 0.3,
       max_tokens: 1024,
       response_format: { type: 'json_object' },
