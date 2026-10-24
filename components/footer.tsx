@@ -28,9 +28,10 @@ export function Footer() {
           {/* Copyright & Credits */}
           <div className="flex flex-col items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-muted-foreground">
             <p>© 2026 Safero. All rights reserved.</p>
-            <p className="text-xs">
+            {/* TEMP-HIDDEN-GENVO: restore on 2026-11-05 */}
+            {/* <p className="text-xs">
               Developed under <span className="font-semibold text-foreground">GENVO LABS</span>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
